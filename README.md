@@ -37,3 +37,7 @@ build/PacketFileSender pcap_file.pcap
 ### Python  
 test/testVelo.py  
 test/testVeloThreading.py  
+
+### C++
+(source) test/testVelo.cxx  
+(usage) build/testVelo  
