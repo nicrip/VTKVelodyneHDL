@@ -29,7 +29,10 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/..../path/to/build"
 export LIBRARY_PATH="$LIBRARY_PATH:/..../path/to/build"  
 export PYTHONPATH="$PYTHONPATH:/..../path/to/build"  
 
-## Usage
+## Usage  
+
+### Streaming PCAP File  
+build/PacketFileSender pcap_file.pcap  
 
 ### Python  
 test/testVelo.py  
