@@ -6,18 +6,18 @@ import time, threading, datetime
 def startVelo():
     velo_target_fps = 30.0
     velo_source = vv.vtkVelodyneHDLSource()
+    #velo_source.SetCorrectionsFile('/path/to/calibration/file.xml')
     velo_source.Update()
     velo_vtk_data = velo_source.GetOutput()
 
     velo_source.Start()
-        
-    next_call = time.time()
+
     while True:
         velo_source.Poll()
         velo_source.UpdateInformation()
 
         e = velo_source.GetExecutive()
-        inf = e.GetOutputInformation().GetInformationObject(0)
+        inf = e.GetOutputInformation(0)
         numTimeSteps = e.TIME_STEPS().Length(inf)
         if not numTimeSteps:
             time.sleep(1.0/velo_target_fps)

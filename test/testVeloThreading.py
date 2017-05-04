@@ -8,6 +8,7 @@ def startVelo():
 
     velo_target_fps = 30.0
     velo_source = vv.vtkVelodyneHDLSource()
+    #velo_source.SetCorrectionsFile('/path/to/calibration/file.xml')
     velo_source.Update()
     velo_vtk_data = velo_source.GetOutput()
 

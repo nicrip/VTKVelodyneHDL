@@ -61,7 +61,8 @@ target_link_libraries(PacketFileSender ${deps})
 add_executable(TestReader test/TestReader.cxx)
 target_link_libraries(TestReader ${library_name})
 
-
+add_executable(testVelo test/testVelo.cxx)
+target_link_libraries(testVelo ${library_name})
 
 
 #install(TARGETS ${library_name}
